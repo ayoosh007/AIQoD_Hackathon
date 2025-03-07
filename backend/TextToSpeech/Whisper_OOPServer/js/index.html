@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech to Text Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+            background-image: url(https://itchronicles.com/wp-content/uploads/2020/10/speech-to-text-1024x683.jpg);
+            background-size: cover;
+            background-position: justify;
+            background-repeat: no-repeat;
+        }
+        .container {
+            width: 50vh;
+            height: 80vh;
+            max-width: 1000px;
+            background: rgb(243, 246, 247);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+        }
+        #output {
+            width: 100%;
+            min-height: 200px;
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .status {
+            margin: 10px 0;
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Speech to Text Converter</h1>
+        <p class="status" id="status">Click the button and start speaking...</p>
+        <button id="startButton">Start Recording</button>
+        <div id="output"></div>
+    </div>
+
+    <script src="script.js"></script> <!-- Load external JS file -->
+</body>
+</html>
