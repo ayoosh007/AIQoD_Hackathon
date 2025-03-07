@@ -1,0 +1,129 @@
+.chat{
+    flex: 2;
+    border-left: 1px solid #dddddd35;
+    display: flex;
+    flex-direction: column;
+.top{
+    padding: 50px;
+}
+.center{
+    border-top:  1px solid #dddddd35 ;
+    padding: 20px;
+    flex: 1;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .message {
+        max-width: 70%;
+        display: flex;
+        gap: 20px;
+        &.own {
+            align-self: flex-end;
+            .texts {
+                img {
+                    width: 100%;
+                    height: 300px;
+                    border-radius: 10px;
+                    object-fit: cover;
+                    padding-bottom: 2px;
+                }
+                p {
+                    background-color: rgba(75, 106, 229, 0.732);
+                    padding: 10px 20px;
+                    border-radius: 12px;
+                }
+                /* Override .markdown-content styling for own messages */
+                .markdown-content {
+                    background-color: transparent;
+                    padding: 0;
+                    border: none;
+                }
+            }
+        }
+        .texts {
+            img {
+                width: 100%;
+                height: 300px;
+                border-radius: 10px;
+                object-fit: cover;
+            }
+            /* For non-own messages, markdown-content styling applies */
+            .markdown-content {
+                background-color: rgba(17,25,40,0.5);
+                padding: 10px 20px;
+                border-radius: 12px;
+            }
+        }
+    }
+    
+}
+.bottom{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top:  1px solid#dddddd35;
+    gap: 20px;
+    margin-top: auto;
+    .icons{
+        display: flex;
+        img{
+            height: 20px;
+            width: 20px;
+            cursor: pointer;
+
+        }
+    }
+    input{
+        flex:1 ;
+        background-color: rgba(17,25,40,0.5);
+        border: none;
+        outline: none;
+        color: white;
+        padding: 20px;
+        border-radius: 12px;
+        font-size: 16px;
+
+    }
+    .sendButton{
+        border: 1px solid #dddddd35;
+        padding: 10px 20px;
+        border-radius: 12px;
+        background-color: transparent;
+        color: white;
+        
+    }
+    .sendButton:hover {
+        background-color: rgba(75, 106, 229, 0.732);
+        
+      }
+    
+      .circular { 
+        img {
+            width: 10px; /* Set exact width */
+            height: 10px; /* Set exact height */
+            object-fit: scale-down;
+            display: block;
+            width: 60%; /* Adjust size if needed */
+            height: auto;
+        }
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        background-color: transparent;
+        border: 1px solid #dddddd35;
+        border-radius: 50%; /* Corrected */
+        display: flex; /* Added for centering */
+        align-items: center; /* Centers vertically */
+        justify-content: center; /* Centers horizontally */
+    }
+    .circular:hover {
+        background-color:rgba(17,25,40,0.5);
+      }
+
+    
+    
+   
+}
+}

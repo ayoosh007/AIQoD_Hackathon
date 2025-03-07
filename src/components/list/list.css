@@ -1,0 +1,84 @@
+.list {
+    flex: 3;
+    position: relative;
+  
+    .icons {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      max-width: 300px;
+      justify-content: space-between;
+      border-top: 1px solid #dddddd35;
+  
+      .dropdown {
+        position: relative;
+      }
+  
+      .File {
+        border: 1px solid #dddddd35;
+        padding: 10px 20px;
+        border-radius: 12px;
+        background-color: transparent;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+      .Edit,
+      .Transcribe,
+      .Export {
+        border: 1px solid #dddddd35;
+        padding: 10px 20px;
+        border-radius: 12px;
+        background-color: transparent;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+      .File:hover,
+      .Edit:hover,
+      .Transcribe:hover,
+      .Export:hover {
+        background-color: rgba(17, 25, 40, 0.5);
+      }
+    }
+  
+    .dropdown-content {
+      position: absolute;
+      border: none;
+      border-radius: 12px;
+      top: 100%;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.65);
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+  
+      button {
+        background: none;
+        color: white;
+        border: none;
+        padding: 10px;
+        text-align: left;
+        width: 100%;
+        cursor: pointer;
+        border-radius: 12px;
+      }
+      button:hover {
+        background-color: rgba(94, 99, 111, 0.5);
+      }
+    }
+  }
+  .file-viewer {
+    position: absolute;
+    top: 40px;
+    height: calc(100% - 40px);
+    width: 100%; /* Ensures it takes the full width of .list */
+}
+
+.file-viewer-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
